@@ -18,7 +18,7 @@ class UserPage {
     this.newUserPassword = this.page.locator('#password');
     this.newUserCompany = this.page.locator('#company');
     this.newUserCostProfileDropdown = this.page.locator('.ant-select-selector').last();
-    this.a20ProfileOption = this.page.locator('[title="A-20"]');
+    this.a30ProfileOption = this.page.locator('[title="A-30"]');
     this.userSearchbox = this.page.locator('.ant-input');
     this.saveNewUserBtn = this.page.locator('[form="my-profile-form"]');
     this.deleteUserButton = this.page.locator('.actionText').first();
@@ -97,7 +97,7 @@ class UserPage {
     await this.newUserPassword.fill('QAPass');
     await this.newUserCompany.fill('AyesaQA');
     await this.newUserCostProfileDropdown.click();
-    await this.a20ProfileOption.click();
+    await this.a30ProfileOption.click();
     await this.saveNewUserBtn.click();
     await this.page.waitForTimeout(3000);
   }
